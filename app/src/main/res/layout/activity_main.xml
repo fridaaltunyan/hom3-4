@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/res"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ECEEF1"
@@ -9,7 +10,7 @@
 
 
     <EditText
-        android:id="@+id/editt"
+        android:id="@+id/first_num"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="25"
@@ -23,7 +24,7 @@
         app:layout_constraintVertical_bias="0.104" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/sec_num"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="27"
@@ -37,70 +38,84 @@
         app:layout_constraintVertical_bias="0.228" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_plus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="23dp"
         android:backgroundTint="#FF9800"
-        android:text="@string/plus"
         android:onClick="operatorCase"
+        android:text="@string/plus"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/btn_min"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.32" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_min"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
         android:backgroundTint="#FF9800"
-        android:text="@string/minus"
         android:onClick="operatorCase"
+        android:text="@string/minus"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/btn_mul"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.32" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_div"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FF9800"
-        android:text="@string/divide"
         android:onClick="operatorCase"
+        android:text="@string/divide"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.32" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btn_mul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:backgroundTint="#FF9800"
+        android:onClick="operatorCase"
         android:text="@string/multiply"
-android:onClick="operatorCase"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_div"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.32" />
 
     <EditText
-        android:id="@+id/ed"
+        android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="27"
         android:hint="@string/result"
         android:inputType="number"
-        android:onClick="equalCase"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.44" />
+
+    <Button
+        android:id="@+id/equal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF9800"
+        android:text="Result"
+        android:onClick="equalCase"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.61" />
 </android.support.constraint.ConstraintLayout>

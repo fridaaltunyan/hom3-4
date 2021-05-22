@@ -16,19 +16,18 @@ class MainActivity : AppCompatActivity() {
     private var oldNumber = ""
     fun operatorCase(view: View) {
         newOp = true
-        oldNumber = findViewById<EditText>(R.id.editt).text.toString()
+        oldNumber = findViewById<EditText>(R.id.first_num).text.toString()
         val buttonSel: Button = view as Button
         when(buttonSel.text.toString()){
             "+" -> op = "+"
             "*" -> op = "*"
             "/" -> op = "/"
             "-" -> op = "-"
-            "%"-> op = "%"
         }
-        findViewById<EditText>(R.id.ed).setText(op)
+        findViewById<EditText>(R.id.result).setText(op)
     }
     fun equalCase(view: View) {
-        val newNumber: String = findViewById<EditText>(R.id.editText).text.toString()
+        val newNumber: String = findViewById<EditText>(R.id.sec_num).text.toString()
         var result = 0.0
         when (op) {
             "+" -> {
@@ -45,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-        this.findViewById<EditText>(R.id.ed).setText(result.toString())
+        this.findViewById<EditText>(R.id.result).setText(result.toString())
 
         newOp = true
     }
